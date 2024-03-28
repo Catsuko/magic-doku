@@ -1,0 +1,15 @@
+.case {
+  margin: 0 auto;
+  background: lightgrey;
+  padding: 20px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: filter 0.2s ease
+}
+
+.card.over > img {
+  filter: brightness(0.6);
+}

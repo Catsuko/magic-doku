@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem 'magic_doku', path: '../core'
+
+gem 'puma', '~> 5.6'
+gem 'rack-contrib', '~> 2.3'
+gem 'rack-cors'
+gem 'sinatra', '~> 2.2'
+gem 'sinatra-contrib'
+gem 'byebug'
+
+gem "haml", "~> 6.3"

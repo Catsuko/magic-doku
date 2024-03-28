@@ -1,0 +1,12 @@
+%link{ rel: "stylesheet", src: "css/puzzle.css" }
+%h1
+  Power Ranking 
+  = "(#{@attempt.tries_remaining})"
+%form{ method: 'post' }
+  .case.flex.justify-center
+    - correct = @attempt.correct?(@puzzle) do |card, correct|
+      %div.dib.w5.mh1.card{ draggable: true, class: correct ? 'bg-green' : nil }
+        %input{ type: 'hidden', name: 'card_ids[]', value: "#{card[:id]}" }
+        %img.mw-100{ src: "#{card[:image]}" }
+  %input{ type: 'submit', value: 'Submit' }
+%script{ src: "javascript/puzzle.js", type: "text/javascript" }

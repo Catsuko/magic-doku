@@ -1,0 +1,25 @@
+---
+includes:
+  - tcgplayer_id
+  - image_uris
+matches:
+  power:     \A\d+\Z
+  type_line: Creature
+excludes:
+  set:
+    - 40k
+    - who
+    - sld
+    - unf
+    - ust
+    - und
+    - unh
+    - cmb2
+    - pip
+  type_line: Token
+mapping:
+  tcgplayer_id:        id
+  power:               power
+  name:                name
+  image_uris.normal:   image
+  image_uris.art_crop: art
